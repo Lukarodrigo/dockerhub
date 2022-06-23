@@ -14,7 +14,7 @@ jobs:
         name: Login to Docker Hub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.lukapagliarini }}
+          username: ${{ secrets.login do docker -u lukapagliarini }}
           password: ${{ secrets.bb85220f-bcac-4020-9cad-2ccb71ab2479 }}
       -
         name: Set up Docker Buildx
@@ -26,4 +26,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.lukapagliarini }}/simplewhale:latest
+          tags: ${{ secrets.login do docker -u lukapagliarini }}/simplewhale:latest
